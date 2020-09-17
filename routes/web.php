@@ -2,6 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::match(['get','post'], '/match' , function(){
+    return 'Match';
+});
+
+Route::any('/any', function (){
+    return 'Any';
+});
+
 Route::post('/register', function (){
     return 'Registro de Usuário';
 });
